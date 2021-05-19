@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="bg-gray-900 text-white">
+    <article id='app' class="flex justify-center items-center h-screen">
+        <div class="flex flex-col space-y-3 text-center">
+            <img :src="picture" :alt="`${firstName} ${lastName}`" :class="genderClass()" class="rounded-full border-4">
+            <h1 class="text-3xl">{{ firstName }} {{ lastName }}</h1>
+            <h3>Email: {{ email }}</h3>
+            <button v-on:click="getUser()" class="bg-green-900 p-3 rounded-lg">Get Random User</button>
+        </div>
+    </article>
+
+    <script src='https://unpkg.com/vue@3.0.5'></script>
+    <script src='/app.js'></script>
+</body>
+
+</html>
